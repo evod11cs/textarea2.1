@@ -1,0 +1,102 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 
+
+body{
+	margin: 0;
+}
+
+textarea,#lol1{
+  outline: none;
+	position: absolute;
+	left:17px;
+	background: black;
+	font-family: monospace;
+	color: white;
+	width:500px;
+	height:400px;
+	resize: none;
+	border: none;
+	font-size: 17px;
+  font-weight:400;
+	margin:0;
+}
+
+#numbers{
+	height: 383px;
+	max-height: 383px;
+	display: inline-block;
+	background-color: rgba(100,120,130,0.5);
+	overflow: hidden;
+}
+
+textarea{
+	/*visibility: hidden;*/
+/*	opacity: 0;*/
+/*
+line-height: 27px;
+padding: 0;
+	color: black;
+	caret-color:white;
+	background-color: rgba(0,0,0,0);
+	mix-blend-mode: lighten;
+	overflow: scroll;
+	overflow-x: scroll;
+	white-space: pre;
+}
+
+span{
+	display: flex;
+  flex-direction: row;
+	height: 27px !important;
+	width:17px;
+  min-height: 27px;
+}
+
+.num{
+	color: white;
+}
+
+.active{
+	background-color: rgb(68,60,51);
+}
+
+#lol1{
+	position: absolute;
+	max-width: 483px;
+	max-height: 383px;
+	overflow: hidden;
+	width:483px;
+	z-index: -1;
+}
+
+#lol1::-moz-selection{
+	background-color: unset;
+	color: unset;
+}
+
+textarea::-moz-selection{
+	background-color: rgba(200,200,200,0.3);
+	color: rgba(0,0,0,0);
+}
+
+#lol1::selection{
+	background-color: unset;
+	color: unset;
+}
+
+textarea::selection{
+	background-color: rgba(200,200,200,0.3);
+	color: rgba(0,0,0,0);
+}
+
+
+
+
+.tag{
+	color: green;
+} */

@@ -20,11 +20,14 @@ class Editor{
       this.div = document.createElement("div");
       this.textarea = document.createElement("textarea");
       this.number = document.createElement("div");
+      this.textBar = document.createElement("span")
+      this.textBar.id = "textBar"
       this.div.id = "textDiv" + this.pos;
       this.textarea.id = "editor" + this.pos;
       this.number.id = "numbers" + this.pos;
       this.textarea.style.width = this.width + "px"
-      this.textarea.style.height = this.height + "px"      
+      this.textarea.style.height = this.height + "px"   
+      this.textarea.spellcheck = false   
 
       document.body.appendChild(this.textarea)
       document.body.appendChild(this.div)
@@ -103,9 +106,7 @@ body{
 
 }
 
-.active{
-	background-color: rgb(68,60,51);
-}
+
 
 #textDiv${this.pos}{
 	position: absolute;
@@ -142,6 +143,9 @@ body{
 
 .tag{
 	color: green;
+}
+.active{
+	background-color: rgb(68,60,51);
 }
       `
       let elt = document.createElement("style")
@@ -227,7 +231,9 @@ body{
             this.reLines()
             this.setDiv(this.ideValues)
             this.createLineNumber()
-            // run()
+            if (autoR){
+            run()
+            }
         }
 
         this.textarea.onscroll = (e) =>{

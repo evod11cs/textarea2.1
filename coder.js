@@ -8,6 +8,7 @@ let html = new Editor(1)
 let css = new Editor(2)
 let js = new Editor(3)
 
+
 html.start(x,y)
 css.start(x,y)
 js.start(x,y)

@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+
+
+
 .tab{
   height:30px;
   outline: none;
@@ -9,28 +12,61 @@
 	border-top:none;
 	border-left:none;
 	border-right:none;
-  background-color: red;
+  background-color: rgb(236, 6, 6);
   padding-left:10px;
   padding-right:10px;
+  margin:0px;
+  float: left;
 }
 .active1{
   border-bottom: 2px solid rgb(73, 161, 102);
 }
 #tabs{
+  padding: 0;
+  margin: 0;
   width:100%;
-  background-color: rgb(100,200,40);
+  position: absolute;
+  top:0;
+  height:30px;
+  background-color: Dodgerblue;
 }
 iframe{
   position: absolute;
   top:30px;
   left:630px;
+  width: 53%;
+  height:90vh;
 }
 
 #runner{
-  position: relative;
-  float: right;
-  right:900px;
+  position: absolute;
+  left: 400px;
   height:30px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#check{
+  position: absolute;
+  left: 450px;
+  top:10px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#check_label{
+  position: absolute;
+  left: 470px;
+  top:10px;
+  color:white;
+  font-family: monospace;
+}
+
+
+#runner:hover{
+  cursor: pointer;
 }
 
 /* 

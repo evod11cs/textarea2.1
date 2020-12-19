@@ -18,3 +18,7 @@ function run() {
 	idoc.close()
 }
 run()
+
+function autoRun(){
+  autoR = !autoR
+}

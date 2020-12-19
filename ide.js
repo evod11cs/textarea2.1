@@ -7,8 +7,8 @@ class Editor{
         this.ideValueList = []
         this.numberLine = false
         this.numbersWidth = 30;
-        this.width = 500;
-        this.height = 400;
+        this.width = 600;
+        this.height = 600;
         this.x = 0
         this.y = 0
         this.lineHeight = 27;
@@ -30,6 +30,9 @@ class Editor{
       document.body.appendChild(this.div)
       document.body.appendChild(this.number)
     }
+    getValues(){
+      return this.rawValues
+    }
     setupTextarea(){
       let style = `
       
@@ -42,6 +45,7 @@ body{
   outline: none;
 	position: absolute;
 	left:${this.numbersWidth + this.x}px;
+  top:${this.y}px;
 	background: black;
 	font-family: monospace;
 	color: white;
@@ -57,6 +61,7 @@ body{
 #numbers${this.pos}{
   position:absolute;
   left:${this.x}px;
+  top:${this.y}px;
 	height: ${this.height - 17}px;
 	max-height: ${this.height - 17}px;
 	display: inline-block;
@@ -78,11 +83,18 @@ body{
 	white-space: pre;
 }
 
-span{
+#numbers${this.pos} span{
 	display: flex;
   flex-direction: row;
 	height: ${this.lineHeight}px !important;
 	width:${this.numbersWidth}px;
+  min-height: ${this.lineHeight}px;
+}
+
+#textDiv${this.pos} span{
+  display: flex;
+  flex-direction: row;
+	height: ${this.lineHeight}px !important;
   min-height: ${this.lineHeight}px;
 }
 
@@ -215,6 +227,7 @@ span{
             this.reLines()
             this.setDiv(this.ideValues)
             this.createLineNumber()
+            // run()
         }
 
         this.textarea.onscroll = (e) =>{
@@ -242,6 +255,18 @@ span{
         this.textarea.onselect = (e) =>{
           this.createLineNumber()
         }
+    }
+    display(type){
+      if (type == "hide"){
+        this.number.style.visibility = "hidden"
+        this.textarea.style.visibility = "hidden"
+        this.div.style.visibility = "hidden"
+      }
+      else{
+        this.number.style.visibility = "visible"
+        this.textarea.style.visibility = "visible"
+        this.div.style.visibility = "visible"
+      }
     }
     createLineNumber(){
         this.numberLine = true

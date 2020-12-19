@@ -2,7 +2,36 @@
   padding: 0;
   margin: 0;
 }
+.tab{
+  height:30px;
+  outline: none;
+  border-bottom-color: rgb(100,200,40); 
+	border-top:none;
+	border-left:none;
+	border-right:none;
+  background-color: red;
+  padding-left:10px;
+  padding-right:10px;
+}
+.active1{
+  border-bottom: 2px solid rgb(73, 161, 102);
+}
+#tabs{
+  width:100%;
+  background-color: rgb(100,200,40);
+}
+iframe{
+  position: absolute;
+  top:30px;
+  left:630px;
+}
 
+#runner{
+  position: relative;
+  float: right;
+  right:900px;
+  height:30px;
+}
 
 /* 
 
